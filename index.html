@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>OAuth2 Callback</title>
+</head>
+<body>
+  <h1>OAuth2 Callback</h1>
+  <p>Thank you for authorizing the application.</p>
+  <script>
+    // Extract the authorization code from the URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const code = urlParams.get('code');
+    
+    // Display the authorization code
+    if (code) {
+      const codeParagraph = document.createElement('p');
+      codeParagraph.innerText = 'Authorization Code: ' + code;
+      document.body.appendChild(codeParagraph);
+    }
+  </script>
+</body>
+</html>
